@@ -1,0 +1,7 @@
+name: TestItem
+version: ${project.version}
+main: me.nekoowo.testitem.TestItem
+api-version: 1.17
+prefix: TestItem
+authors: [ NekoOwOb ]
+description: Testing
