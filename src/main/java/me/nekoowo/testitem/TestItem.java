@@ -1,5 +1,6 @@
 package me.nekoowo.testitem;
 
+import me.nekoowo.testitem.listener.EntityGetDamagedEvent;
 import me.nekoowo.testitem.listener.JoinEvent;
 import me.nekoowo.testitem.listener.KatanaDamageEvent;
 import me.nekoowo.testitem.utils.RecipeManager;
@@ -21,6 +22,7 @@ public final class TestItem extends JavaPlugin {
         // Plugin startup logic
         new JoinEvent(this);
         new KatanaDamageEvent(this);
+        new EntityGetDamagedEvent(this);
         recipeManager = new RecipeManager(this);
         recipeManager.addRecipe();
 

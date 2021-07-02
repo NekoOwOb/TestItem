@@ -1,12 +1,16 @@
 package me.nekoowo.testitem.listener;
 
 import me.nekoowo.testitem.TestItem;
+import me.nekoowo.testitem.item.katana.Katana;
 import me.nekoowo.testitem.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.EntityCategory;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,6 +22,7 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 public class KatanaDamageEvent implements Listener {
@@ -28,6 +33,7 @@ public class KatanaDamageEvent implements Listener {
     final double COOLDOWN_DAMAGE = 0.5D;
 
     HashMap<UUID, Double> normalAttackDamage = new HashMap<>();
+    Map<Enchantment, Integer> enchantments = new HashMap<>();
 
     TestItem plugin;
 
@@ -51,6 +57,7 @@ public class KatanaDamageEvent implements Listener {
                 return;
             }
             ItemMeta metaInMain = itemInMain.getItemMeta();
+            enchantments = metaInMain.getEnchants();
             NamespacedKey key = plugin.getTypeKey();
             PersistentDataContainer container = metaInMain.getPersistentDataContainer();
             String type = "";
@@ -63,6 +70,26 @@ public class KatanaDamageEvent implements Listener {
                 for (AttributeModifier am : metaInMain.getAttributeModifiers(Attribute.GENERIC_ATTACK_DAMAGE)) {
                     totalAttackDamage += am.getAmount();
                 }
+
+                if (enchantments.containsKey(Enchantment.DAMAGE_ALL)) {
+                    totalAttackDamage += Katana.getDamageAllValue(enchantments.get(Enchantment.DAMAGE_ALL));
+                }
+
+
+                if (e.getEntity() instanceof LivingEntity) {
+                    LivingEntity l = (LivingEntity) e.getEntity();
+                    if (l.getCategory().equals(EntityCategory.UNDEAD) && enchantments.containsKey(Enchantment.DAMAGE_UNDEAD)) {
+                        totalAttackDamage += Katana.getDamageUndeadValue(enchantments.get(Enchantment.DAMAGE_UNDEAD));
+                    }
+                    if (l.getCategory().equals(EntityCategory.ARTHROPOD) && enchantments.containsKey(Enchantment.DAMAGE_ARTHROPODS)) {
+                        totalAttackDamage += Katana.getDamageArthropodsValue(enchantments.get(Enchantment.DAMAGE_ARTHROPODS));
+                    }
+                }
+
+                if (enchantments.containsKey(Enchantment.SWEEPING_EDGE)) {
+                    totalAttackDamage = Katana.setDamageBySweepingValue(totalAttackDamage, enchantments.get(Enchantment.SWEEPING_EDGE));
+                }
+
 
                 double damage = totalAttackDamage;
                 if (!itemInOff.getType().equals(Material.AIR)) {
@@ -87,8 +114,16 @@ public class KatanaDamageEvent implements Listener {
 
                 if (isSweepAttack) {
                     e.setDamage(normalAttackDamage.get(playerUUID));
+                    if (e.getEntity() instanceof LivingEntity) {
+                        LivingEntity l = (LivingEntity) e.getEntity();
+                        if (enchantments.containsKey(Enchantment.FIRE_ASPECT)) {
+                            l.setFireTicks(80 * enchantments.get(Enchantment.FIRE_ASPECT));
+                        }
+//                        if (enchantments.containsKey(Enchantment.KNOCKBACK)) {
+//                            l.setVelocity();
+//                        }
+                    }
                 }
-
             }
         }
     }

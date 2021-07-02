@@ -40,6 +40,31 @@ public abstract class Katana extends ExtraItem {
         return typeKey;
     }
 
+    public static double getDamageAllValue(Integer level) {
+        if (level == 1)
+            return 0.4;
+        else if (level > 1)
+            return 0.4 + (level - 1) * 0.2;
+        else
+            return 0;
+    }
 
+    public static double getDamageUndeadValue(Integer level) {
+        if (level >= 1)
+            return level;
+        else
+            return 0;
+    }
+
+    public static double getDamageArthropodsValue(Integer level) {
+        if (level >= 1)
+            return level;
+        else
+            return 0;
+    }
+
+    public static double setDamageBySweepingValue(Double damage, Integer level) {
+        return 1 + damage * (1 + (level / (level + 2.25)));
+    }
 
 }
