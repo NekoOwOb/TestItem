@@ -119,9 +119,9 @@ public class KatanaDamageEvent implements Listener {
                         if (enchantments.containsKey(Enchantment.FIRE_ASPECT)) {
                             l.setFireTicks(80 * enchantments.get(Enchantment.FIRE_ASPECT));
                         }
-//                        if (enchantments.containsKey(Enchantment.KNOCKBACK)) {
-//                            l.setVelocity();
-//                        }
+                        if (enchantments.containsKey(Enchantment.KNOCKBACK)) {
+                            l.setVelocity(l.getLocation().getDirection().add(e.getDamager().getLocation().getDirection().multiply(3 * (enchantments.get(Enchantment.KNOCKBACK) - 1))));
+                        }
                     }
                 }
             }

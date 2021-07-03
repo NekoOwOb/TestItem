@@ -18,12 +18,12 @@ public class EntityGetDamagedEvent implements Listener {
     }
 
     @EventHandler
-    public void getDamageValue(EntityDamageByEntityEvent e) {
-        double damageValue = e.getDamage();
-        String name = e.getEntity().getName();
-        if (e.getDamager() instanceof Player) {
-            Player p = (Player) e.getDamager();
-            p.sendMessage(Utils.chat("You deal " + damageValue + " to " + name));
+    public void getDamageValue(EntityDamageByEntityEvent even) {
+        double damageValue = even.getDamage();
+        String name = even.getEntity().getName();
+        if (even.getDamager() instanceof Player) {
+            Player player = (Player) even.getDamager();
+            player.sendMessage(Utils.chat("You deal " + damageValue + " to " + name));
         }
     }
 }
