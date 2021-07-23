@@ -64,7 +64,7 @@ public class KatanaDamageEvent implements Listener {
             if (container.has(key, PersistentDataType.STRING)) {
                 type = container.get(key, PersistentDataType.STRING);
             }
-            if (type.equals("Katana")) {
+            if (type.equals(Katana.getKatanaKey())) {
                 double totalAttackDamage = 0.0;
 
                 for (AttributeModifier am : metaInMain.getAttributeModifiers(Attribute.GENERIC_ATTACK_DAMAGE)) {
@@ -117,10 +117,12 @@ public class KatanaDamageEvent implements Listener {
                     if (e.getEntity() instanceof LivingEntity) {
                         LivingEntity l = (LivingEntity) e.getEntity();
                         if (enchantments.containsKey(Enchantment.FIRE_ASPECT)) {
-                            l.setFireTicks(80 * enchantments.get(Enchantment.FIRE_ASPECT));
+                            l.setFireTicks(Katana.getFireAspectTicks(enchantments.get(Enchantment.FIRE_ASPECT)));
                         }
                         if (enchantments.containsKey(Enchantment.KNOCKBACK)) {
-                            l.setVelocity(l.getLocation().getDirection().add(e.getDamager().getLocation().getDirection().multiply(3 * (enchantments.get(Enchantment.KNOCKBACK) - 1))));
+                            l.setVelocity(l.getLocation().getDirection()
+                                    .add(e.getDamager().getLocation().getDirection()
+                                            .multiply(Katana.getKnockbackDistance(enchantments.get(Enchantment.KNOCKBACK)))));
                         }
                     }
                 }

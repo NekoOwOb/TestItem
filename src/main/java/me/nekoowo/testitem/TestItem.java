@@ -3,6 +3,7 @@ package me.nekoowo.testitem;
 import me.nekoowo.testitem.listener.EntityGetDamagedEvent;
 import me.nekoowo.testitem.listener.JoinEvent;
 import me.nekoowo.testitem.listener.KatanaDamageEvent;
+import me.nekoowo.testitem.listener.SmithingEvent;
 import me.nekoowo.testitem.utils.RecipeManager;
 import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,9 +21,11 @@ public final class TestItem extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+        saveDefaultConfig();
         new JoinEvent(this);
         new KatanaDamageEvent(this);
         new EntityGetDamagedEvent(this);
+        new SmithingEvent(this);
         recipeManager = new RecipeManager(this);
         recipeManager.addRecipe();
 

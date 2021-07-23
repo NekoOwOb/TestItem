@@ -5,10 +5,16 @@ import org.bukkit.inventory.EquipmentSlot;
 
 public interface AttributeModify {
 
-    AttributeModifier getAtkDmgModifier(double atkDmg, EquipmentSlot slot);
+    static AttributeModifier getAtkDmgModifier(double atkDmg, EquipmentSlot slot) {
+        return null;
+    }
 
-    AttributeModifier getAtkSpdModifier(double atkSpd, EquipmentSlot slot);
+    static AttributeModifier getAtkSpdModifier(double atkSpd, EquipmentSlot slot) {
+        return null;
+    }
 
-    AttributeModifier getMoveSpdModifier(double moveSpd, EquipmentSlot slot);
+    static AttributeModifier getMoveSpdModifier(double moveSpd, EquipmentSlot slot) {
+        return null;
+    }
 
 }

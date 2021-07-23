@@ -1,0 +1,231 @@
+#The extra item types
+items:
+  katana:
+    wooden_katana:
+      id: "wooden_katana"
+      item: "WOODEN_SWORD"
+      display_name: "&f木武士刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 4.0
+        attack_knockback: 0.0
+        attack_speed: 1.2
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "PLANKS"
+      slot: "HAND"
+
+    stone_katana:
+      id: "stone_katana"
+      item: "STONE_SWORD"
+      display_name: "&f石武士刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 5.0
+        attack_knockback: 0.0
+        attack_speed: 1.2
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "STONES"
+      slot: "HAND"
+
+    golden_katana:
+      id: "golden_katana"
+      item: "GOLDEN_SWORD"
+      display_name: "&f金武士刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 5.0
+        attack_knockback: 0.0
+        attack_speed: 1.2
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "GOLD"
+      slot: "HAND"
+
+    iron_katana:
+      id: "iron_katana"
+      item: "IRON_SWORD"
+      display_name: "&f鐵武士刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 6.0
+        attack_knockback: 0.0
+        attack_speed: 1.2
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "IRON"
+      slot: "HAND"
+
+    diamond_katana:
+      id: "diamond_katana"
+      item: "DIAMOND_SWORD"
+      display_name: "&f鑽石武士刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 7.0
+        attack_knockback: 0.0
+        attack_speed: 1.2
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "DIAMOND"
+      slot: "HAND"
+
+    netherite_katana:
+      id: "netherite_katana"
+      item: "NETHERITE_SWORD"
+      display_name: "&f獄髓武士刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 8.0
+        attack_knockback: 0.0
+        attack_speed: 1.2
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "NETHERITE"
+      slot: "HAND"
+
+  sickle:
+    wooden_sickle:
+      id: "wooden_sickle"
+      item: "WOODEN_HOE"
+      display_name: "&f木鐮刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 5.0
+        attack_knockback: 0.0
+        attack_speed: 0.8
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "PLANKS"
+      slot: "HAND"
+
+    stone_sickle:
+      id: "stone_sickle"
+      item: "STONE_HOE"
+      display_name: "&f石鐮刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 6.0
+        attack_knockback: 0.0
+        attack_speed: 0.8
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "STONES"
+      slot: "HAND"
+
+    golden_sickle:
+      id: "golden_sickle"
+      item: "GOLDEN_HOE"
+      display_name: "&f金鐮刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 5.0
+        attack_knockback: 0.0
+        attack_speed: 0.8
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "GOLD"
+      slot: "HAND"
+
+    iron_sickle:
+      id: "iron_sickle"
+      item: "IRON_HOE"
+      display_name: "&f鐵鐮刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 6.0
+        attack_knockback: 0.0
+        attack_speed: 0.8
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "IRON"
+      slot: "HAND"
+
+    diamond_sickle:
+      id: "diamond_sickle"
+      item: "DIAMOND_HOE"
+      display_name: "&f鑽石鐮刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 7.0
+        attack_knockback: 0.0
+        attack_speed: 0.8
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "DIAMOND"
+      slot: "HAND"
+
+    netherite_sickle:
+      id: "netherite_sickle"
+      item: "NETHERITE_HOE"
+      display_name: "&f獄髓鐮刀"
+      attributes:
+        armor: 0.0
+        armor_toughness: 0.0
+        attack_damage: 9.0
+        attack_knockback: 0.0
+        attack_speed: 0.8
+        flying_speed: 0.0
+        follow_range: 0.0
+        knockback_resistance: 0.0
+        luck: 0.0
+        max_health: 0.0
+        movement_speed: 0.0
+      choice: "NETHERITE"
+      slot: "HAND"

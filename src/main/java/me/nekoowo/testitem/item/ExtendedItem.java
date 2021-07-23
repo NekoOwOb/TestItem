@@ -3,11 +3,20 @@ package me.nekoowo.testitem.item;
 import org.bukkit.Material;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapedRecipe;
 
 public interface ExtendedItem {
 
+    char getMaterialKey();
+
+    char getStickKey();
+
     Material getMaterial();
+
+    EquipmentSlot getSlot();
+
+    String getTypeKey();
 
     double getAttackDamage();
 
@@ -15,15 +24,13 @@ public interface ExtendedItem {
 
     double getMoveSpeed();
 
-    char getMaterialKey();
-
-    char getStickKey();
-
     String getDisplayName();
 
-    EquipmentSlot getSlot();
+    String getLocalizedName();
 
-    String getTypeKey();
+    void setWeaponAttri(double atkDmg, double atkSpd, double moveSpeed);
 
-    ShapedRecipe getRecipe(ItemStack item);
+    void setNames(String displayName, String localizedName);
+
+    ShapedRecipe getRecipe();
 }

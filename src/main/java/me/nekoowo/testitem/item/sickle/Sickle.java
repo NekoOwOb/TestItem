@@ -1,4 +1,4 @@
-package me.nekoowo.testitem.item.katana;
+package me.nekoowo.testitem.item.sickle;
 
 import me.nekoowo.testitem.TestItem;
 import me.nekoowo.testitem.item.ExtraItem;
@@ -9,17 +9,17 @@ import org.bukkit.persistence.PersistentDataType;
 
 import java.util.List;
 
-public class Katana extends ExtraItem {
+public class Sickle extends ExtraItem {
 
-    private ItemStack katana;
+    private ItemStack sickle;
 
-    protected final String[] recipeShape = new String[] {"  M", " M ", "S  "};
-    protected final String typeKey = "Katana";
-    protected final static String katanaKey = "Katana";
+    protected final String[] recipeShape = new String[] {" MM", "M S", "  S"};
+    protected final String typeKey = "Sickle";
+    protected final static String sickleKey = "Sickle";
 
-    public Katana(TestItem plugin, Material itemMaterial, String itemKeyName, EquipmentSlot slot, String displayName, String localizedName, List<Double> attributes, RecipeChoice.MaterialChoice materialChoice) {
+    public Sickle(TestItem plugin, Material itemMaterial, String itemKeyName, EquipmentSlot slot, String displayName, String localizedName, List<Double> attributes, RecipeChoice.MaterialChoice materialChoice) {
         super(plugin, itemMaterial, itemKeyName, slot, displayName, localizedName, attributes, materialChoice);
-        katana = new ItemStack(itemMaterial);
+        sickle = new ItemStack(itemMaterial);
         initializeItem();
     }
 
@@ -34,7 +34,7 @@ public class Katana extends ExtraItem {
 
     @Override
     public ItemStack getItem() {
-        return katana;
+        return sickle;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class Katana extends ExtraItem {
 
     @Override
     public Recipe getRecipe() {
-        if (getItem().getType().equals(Material.NETHERITE_SWORD)) {
+        if (getItem().getType().equals(Material.NETHERITE_HOE)) {
             return new SmithingRecipe(getItemKey(), getItem(), getExactBaseChoice(), getExactAdditionalChoice());
         }
 
@@ -59,8 +59,8 @@ public class Katana extends ExtraItem {
         return shapedRecipe;
     }
 
-    public static String getKatanaKey() {
-        return katanaKey;
+    public static String getSickleKey() {
+        return sickleKey;
     }
 
     // Enchantment
