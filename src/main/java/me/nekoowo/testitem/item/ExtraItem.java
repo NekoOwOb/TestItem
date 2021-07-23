@@ -12,7 +12,7 @@ import org.bukkit.persistence.PersistentDataType;
 import java.util.List;
 import java.util.UUID;
 
-public abstract class ExtraItem extends ItemStack implements AttributeModify {
+public abstract class ExtraItem extends ItemStack {
     protected TestItem plugin;
     protected ItemStack extraItem;
     protected NamespacedKey itemKey;

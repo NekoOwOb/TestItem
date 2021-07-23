@@ -1,4 +1,4 @@
-package me.nekoowo.testitem.listener;
+package me.nekoowo.testitem.listener.item;
 
 import me.nekoowo.testitem.TestItem;
 import me.nekoowo.testitem.item.katana.Katana;

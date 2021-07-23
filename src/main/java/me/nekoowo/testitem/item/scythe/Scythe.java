@@ -1,4 +1,4 @@
-package me.nekoowo.testitem.item.sickle;
+package me.nekoowo.testitem.item.scythe;
 
 import me.nekoowo.testitem.TestItem;
 import me.nekoowo.testitem.item.ExtraItem;
@@ -9,17 +9,17 @@ import org.bukkit.persistence.PersistentDataType;
 
 import java.util.List;
 
-public class Sickle extends ExtraItem {
+public class Scythe extends ExtraItem {
 
-    private ItemStack sickle;
+    private ItemStack scythe;
 
     protected final String[] recipeShape = new String[] {" MM", "M S", "  S"};
-    protected final String typeKey = "Sickle";
-    protected final static String sickleKey = "Sickle";
+    protected final String typeKey = "Scythe";
+    protected final static String scytheKey = "Scythe";
 
-    public Sickle(TestItem plugin, Material itemMaterial, String itemKeyName, EquipmentSlot slot, String displayName, String localizedName, List<Double> attributes, RecipeChoice.MaterialChoice materialChoice) {
+    public Scythe(TestItem plugin, Material itemMaterial, String itemKeyName, EquipmentSlot slot, String displayName, String localizedName, List<Double> attributes, RecipeChoice.MaterialChoice materialChoice) {
         super(plugin, itemMaterial, itemKeyName, slot, displayName, localizedName, attributes, materialChoice);
-        sickle = new ItemStack(itemMaterial);
+        scythe = new ItemStack(itemMaterial);
         initializeItem();
     }
 
@@ -34,7 +34,7 @@ public class Sickle extends ExtraItem {
 
     @Override
     public ItemStack getItem() {
-        return sickle;
+        return scythe;
     }
 
     @Override
@@ -59,8 +59,8 @@ public class Sickle extends ExtraItem {
         return shapedRecipe;
     }
 
-    public static String getSickleKey() {
-        return sickleKey;
+    public static String getScytheKey() {
+        return scytheKey;
     }
 
     // Enchantment

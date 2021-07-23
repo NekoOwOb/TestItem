@@ -2,7 +2,7 @@ package me.nekoowo.testitem.item;
 
 import me.nekoowo.testitem.TestItem;
 import me.nekoowo.testitem.item.katana.Katana;
-import me.nekoowo.testitem.item.sickle.Sickle;
+import me.nekoowo.testitem.item.scythe.Scythe;
 import org.bukkit.Material;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.RecipeChoice;
@@ -65,8 +65,8 @@ public class ItemBuildBuilder implements ItemBuild {
         if (itemKey.equals(Katana.getKatanaKey().toLowerCase())) {
             return new Katana(plugin, itemMaterial, itemKeyName, slot, displayName, localizedName, attributes, materialChoice);
         }
-        if (itemKey.equals(Sickle.getSickleKey().toLowerCase()))
-            return new Sickle(plugin, itemMaterial, itemKeyName, slot, displayName, localizedName, attributes, materialChoice);
+        if (itemKey.equals(Scythe.getScytheKey().toLowerCase()))
+            return new Scythe(plugin, itemMaterial, itemKeyName, slot, displayName, localizedName, attributes, materialChoice);
         return null;
     }
 

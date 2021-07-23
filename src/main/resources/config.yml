@@ -115,9 +115,9 @@ items:
       choice: "NETHERITE"
       slot: "HAND"
 
-  sickle:
-    wooden_sickle:
-      id: "wooden_sickle"
+  scythe:
+    wooden_scythe:
+      id: "wooden_scythe"
       item: "WOODEN_HOE"
       display_name: "&f木鐮刀"
       attributes:
@@ -135,8 +135,8 @@ items:
       choice: "PLANKS"
       slot: "HAND"
 
-    stone_sickle:
-      id: "stone_sickle"
+    stone_scythe:
+      id: "stone_scythe"
       item: "STONE_HOE"
       display_name: "&f石鐮刀"
       attributes:
@@ -154,8 +154,8 @@ items:
       choice: "STONES"
       slot: "HAND"
 
-    golden_sickle:
-      id: "golden_sickle"
+    golden_scythe:
+      id: "golden_scythe"
       item: "GOLDEN_HOE"
       display_name: "&f金鐮刀"
       attributes:
@@ -173,8 +173,8 @@ items:
       choice: "GOLD"
       slot: "HAND"
 
-    iron_sickle:
-      id: "iron_sickle"
+    iron_scythe:
+      id: "iron_scythe"
       item: "IRON_HOE"
       display_name: "&f鐵鐮刀"
       attributes:
@@ -192,8 +192,8 @@ items:
       choice: "IRON"
       slot: "HAND"
 
-    diamond_sickle:
-      id: "diamond_sickle"
+    diamond_scythe:
+      id: "diamond_scythe"
       item: "DIAMOND_HOE"
       display_name: "&f鑽石鐮刀"
       attributes:
@@ -211,8 +211,8 @@ items:
       choice: "DIAMOND"
       slot: "HAND"
 
-    netherite_sickle:
-      id: "netherite_sickle"
+    netherite_scythe:
+      id: "netherite_scythe"
       item: "NETHERITE_HOE"
       display_name: "&f獄髓鐮刀"
       attributes:

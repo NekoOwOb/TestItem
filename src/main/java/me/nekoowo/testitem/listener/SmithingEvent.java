@@ -3,7 +3,7 @@ package me.nekoowo.testitem.listener;
 import me.nekoowo.testitem.TestItem;
 import me.nekoowo.testitem.item.ExtraItem;
 import me.nekoowo.testitem.item.katana.Katana;
-import me.nekoowo.testitem.item.sickle.Sickle;
+import me.nekoowo.testitem.item.scythe.Scythe;
 import me.nekoowo.testitem.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -57,13 +57,13 @@ public class SmithingEvent implements Listener {
                     resultItem.setItemMeta(resultMeta);
                 }
 
-                if (type.equals(Sickle.getSickleKey())) {
-                    if (baseMeta.getDisplayName().equals(Utils.getItemDName(plugin, "sickle.diamond_sickle"))) {
-                        resultMeta.setDisplayName(Utils.getItemDName(plugin, "sickle.netherite_sickle"));
+                if (type.equals(Scythe.getScytheKey())) {
+                    if (baseMeta.getDisplayName().equals(Utils.getItemDName(plugin, "scythe.diamond_scythe"))) {
+                        resultMeta.setDisplayName(Utils.getItemDName(plugin, "scythe.netherite_scythe"));
                     }
                     resultMeta.removeAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE);
                     resultMeta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, ExtraItem.getAtkDmgModifier(
-                            Utils.getAttribute(plugin, "sickle.netherite_sickle", "attack_damage"),
+                            Utils.getAttribute(plugin, "scythe.netherite_scythe", "attack_damage"),
                             EquipmentSlot.HAND));
                     resultItem.setItemMeta(resultMeta);
                 }
