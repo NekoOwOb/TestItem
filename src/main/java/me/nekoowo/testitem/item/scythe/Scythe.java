@@ -3,6 +3,7 @@ package me.nekoowo.testitem.item.scythe;
 import me.nekoowo.testitem.TestItem;
 import me.nekoowo.testitem.item.ExtraItem;
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
@@ -67,9 +68,9 @@ public class Scythe extends ExtraItem {
 
     public static double getDamageAllValue(Integer level) {
         if (level == 1)
-            return 0.4;
+            return 1.0;
         else if (level > 1)
-            return 0.4 + (level - 1) * 0.2;
+            return 1.0 + (level - 1) * 0.25;
         else
             return 0;
     }
